@@ -348,6 +348,7 @@ void print_RTC(void) {
 	hh = my_date.Year + ((century - 1) * 100);
 	my_date.WeekDay = calc_dow(hh, (int) my_date.Month, my_date.Date);
 	LCD_DisARectangular(200, 125, 319, 188, lcd_background_color); // clear for short name
+	LCD_DisARectangular(88, 178, 200, 188, lcd_background_color); // clear BOTTOM OF LETTERS
 	lcd_text_boxed(88, 140, getDayofweek(my_date.WeekDay), dum1_ttf, 42);
 
 
